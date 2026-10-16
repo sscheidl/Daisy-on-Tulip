@@ -93,7 +93,8 @@ make -C daisy MIDI_BACKEND=DIN
 Der Build nutzt `desktop_devkit::Hardware`, keine Field-/Pod-/Patch-Pinbelegung.
 Die Bibliothek erkennt Seed3 und dessen TAC5242-Codec zur Laufzeit. Ein
 [GitHub-Actions-Workflow](.github/workflows/build.yml) baut und testet bei Push/PR;
-er wurde in dieser Sitzung noch nicht auf GitHub ausgeführt.
+die erste GitHub-Ausführung wird nach dem Upload geprüft. Ergebnisse stehen im
+[Testprotokoll](docs/TEST_RESULTS.md).
 
 Konfiguration: [config/protocol.json](config/protocol.json) ändern und
 `python3 scripts/generate_protocol.py` ausführen. Daraus entstehen dieselben
@@ -101,21 +102,23 @@ Noten, CCs, Zeiten und MIDI-Kanäle für C++ und MicroPython.
 
 ## Übergabe / GitHub
 
-Das Erstellen eines privaten Repositories `sscheidl/Daisy-on-Tulip` wurde am
-16.10.2026 versucht und von GitHub mit **HTTP 403: Resource not accessible by
-integration** abgelehnt. Daher wurde kein Remote-Repository und kein GitHub-
-Release erstellt. Das lokale Repository besitzt den Alpha-Tag; Quellarchiv,
-Git-Bundle und Firmware-Artefakte liegen zur Übernahme bereit.
-
-Mit einer GitHub-Anmeldung, die neue private Repositories erstellen darf:
+Das Projekt wird im privaten Repository
+[sscheidl/Daisy-on-Tulip](https://github.com/sscheidl/Daisy-on-Tulip) gepflegt.
+Der vorbereitete Prerelease
+[v0.1.0-alpha](https://github.com/sscheidl/Daisy-on-Tulip/releases/tag/v0.1.0-alpha)
+enthält die drei Firmware-Sätze, die Tulip-App, Prüfsummen und das Komplettpaket.
 
 ```sh
-bash scripts/publish_github.sh
+git clone https://github.com/sscheidl/Daisy-on-Tulip.git
+cd Daisy-on-Tulip
 ```
 
-Das Skript erstellt ausschließlich ein neues privates Repository und einen
-Prerelease mit Artefakten. Ein vorhandenes Repository wird nicht überschrieben.
-Siehe [GitHub-Blocker](docs/GITHUB_HANDOFF.md) und [Release-Hinweise](docs/RELEASE_NOTES.md).
+Für das private Repository und seine Release-Dateien ist eine berechtigte
+GitHub-Anmeldung nötig. Das ursprüngliche Erstellungsrecht der Integration war
+gesperrt; nach dem Anlegen und Freigeben des Repositories ist der Zugriff möglich.
+Die vorhandene Initialisierungshistorie wurde übernommen. Bestehende andere
+Daisy-Projekte wurden nicht verändert. Siehe [GitHub-Übergabe](docs/GITHUB_HANDOFF.md)
+und [Release-Hinweise](docs/RELEASE_NOTES.md).
 
 Architektur und Erweiterungspunkte: [ARCHITECTURE.md](docs/ARCHITECTURE.md).
 Protokoll: [MIDI_PROTOCOL.md](docs/MIDI_PROTOCOL.md).

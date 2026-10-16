@@ -1,60 +1,50 @@
-# GitHub-Blocker und Übergabe
+# GitHub und Übergabe
 
-Am 16.10.2026 war die GitHub-CLI als **sscheidl** authentifiziert. Der konkrete
-Versuch `POST /user/repos` mit `name=Daisy-on-Tulip` und `private=true` lieferte:
+Repository: [sscheidl/Daisy-on-Tulip](https://github.com/sscheidl/Daisy-on-Tulip),
+**privat**. Der Zugriff mit Pull-/Push-Rechten ist nach Freigabe bestätigt.
+Die ursprünglichen Versuche zur Repository-Erstellung lieferten HTTP 403
+„Resource not accessible by integration“. Das anschließend angelegte Repository
+wurde eingebunden; sein Initialisierungscommit bleibt in der Historie erhalten.
+Andere Repositories, insbesondere `Daisy-Seed`, wurden nicht verändert.
 
-```text
-HTTP 403
-Resource not accessible by integration
-https://docs.github.com/rest/repos/repos#create-a-repository-for-the-authenticated-user
+## GitHub verwenden
+
+```sh
+git clone https://github.com/sscheidl/Daisy-on-Tulip.git
+cd Daisy-on-Tulip
 ```
 
-Die verfügbare Integration darf somit kein neues Repository für diesen Account
-erstellen. Es wurde kein anderes Repository als Ausweichziel verwendet, kein
-bestehendes `Daisy-Seed` geändert und kein öffentlicher Ersatz angelegt. Es
-gibt keinen GitHub-Release und keine bestätigte GitHub-Actions-Ausführung.
+Der [Alpha-Prerelease](https://github.com/sscheidl/Daisy-on-Tulip/releases/tag/v0.1.0-alpha)
+ist für Firmware- und App-Dateien vorgesehen. Zugriff auf Repository und Assets
+erfordert eine passende GitHub-Anmeldung. Die Actions-Ausführung und der
+Veröffentlichungsstatus werden in `TEST_RESULTS.md` gesondert dokumentiert.
 
-## Vorbereitet
+## Enthaltene Übergabe
 
-- Eigenständiges lokales Git-Repository, Branch `main`, Tag `v0.1.0-alpha`.
-- Vollständige Quellstruktur, Dokumentation, Tests und Build-/Installationsskripte.
+- Eigenständiges Git-Repository, Branch `main`, Alpha-Tag `v0.1.0-alpha`.
+- Quellcode, Dokumentation, Tests und Build-/Installationsskripte.
 - Drei `.bin`-/`.elf`-/`.map`-Sätze, Prüfsummen, Manifest und lokale Testlogs.
 - `dist/Daisy-on-Tulip-v0.1.0-alpha.zip`: Quellstand plus fertige Artefakte.
 - `dist/daisy_toy_piano.zip`: installierbare Python-Quelldateien.
-- `dist/Daisy-on-Tulip-v0.1.0-alpha.bundle`: Git-Historie und Tag für Übernahme.
+- `dist/Daisy-on-Tulip-v0.1.0-alpha.bundle`: vollständige Git-Historie und Tag.
 
-Builddateien sind bewusst nicht im Quell-Git getrackt; sie befinden sich im
-Komplettpaket und werden im vorbereiteten GitHub-Prerelease als Assets hochgeladen.
+Builddateien sind nicht im Quell-Git getrackt. Sie liegen im Komplettpaket und
+werden als Prerelease-Assets bereitgestellt. Mit `scripts/build.sh` lassen sie
+sich aus den gepinnten Quellen erneut erzeugen. Das Manifest prüft den
+Zusammenhang von Firmware-/App-Quellen und Artefakten vor dem Verpacken.
 
-## Übernahme auf eigenem Rechner
-
-Komplett-ZIP entpacken und entweder ein neues lokales Git-Repository initialisieren
-oder die vorbereitete Historie aus dem Bundle verwenden:
+## Offline übernehmen
 
 ```sh
 git clone Daisy-on-Tulip-v0.1.0-alpha.bundle Daisy-on-Tulip-git
-```
-
-Die `artifacts/` aus dem Komplettpaket in diesen Checkout kopieren, wenn nicht
-erneut gebaut werden soll. `dist/` muss nicht übernommen werden; die Pakete
-werden vom Skript neu erzeugt.
-
-Mit einer GitHub-Anmeldung, die neue private Repositories erstellen darf:
-
-```sh
 cd Daisy-on-Tulip-git
-git remote remove origin
-bash scripts/publish_github.sh
+git remote set-url origin https://github.com/sscheidl/Daisy-on-Tulip.git
 ```
 
-`git clone <bundle>` setzt `origin` auf die Bundle-Datei; dieses lokale origin
-deshalb vorher entfernen. Bei einem frisch mit `git init` erstellten Checkout
-ohne origin ist der Schritt nicht nötig. Das Skript erstellt
-`<angemeldeter Account>/Daisy-on-Tulip` privat, pusht `main` und den vorbereiteten
-Tag und erstellt `v0.1.0-alpha` als Prerelease mit Firmware- und App-Assets.
-Wenn der Name schon existiert oder origin gesetzt ist, bricht es ab. Es versucht
-keine Umstrukturierung vorhandener Projekte.
+Die `artifacts/` aus dem Komplettpaket übernehmen, falls nicht neu gebaut werden
+soll. `python3 scripts/package.py` erzeugt die Übergabepakete erneut.
 
-Nach Push die Actions-Ausführung prüfen und deren Ergebnis gesondert in
-`TEST_RESULTS.md` dokumentieren. Ein lokaler Crossbuild ist kein Nachweis einer
-erfolgreichen GitHub-Runner-Ausführung.
+`scripts/publish_github.sh` ist der ursprüngliche Erstanlage-Helfer für ein
+**noch nicht existierendes** Repository in einem entsprechend berechtigten
+Account. Im nun bestehenden Repository wird er nicht erneut benötigt. Normale
+Änderungen werden über Git gepusht; veröffentlichte Tags/Assets nicht überschreiben.

@@ -23,8 +23,9 @@ Hardwareabnahme A–D ist **OFFEN**.
 | MicroPython-App | BESTANDEN (Syntax) | Alle fünf Dateien mit `mpy-cross` aus Tulips MicroPython-Commit übersetzt, `.mpy` v6.3 |
 | LVGL-API-Prüfung | BESTANDEN (Quellprüfung) | Aktuellen Binding-C-Code aus Referenzheadern generiert; Timer-Create/Delete und verwendete native APIs vorhanden. Kein Render-/Touchtest |
 | Wiederholter Firmwarebuild | BESTANDEN | Alle neun `.bin`-/`.elf`-/`.map`-Prüfsummen im selben Workspace unverändert nach sauberem Firmware-Rebuild |
-| GitHub Actions | NICHT AUSGEFÜHRT | Workflow vorhanden; Repository-Erstellung durch Integration gesperrt |
-| GitHub Repository / Release | BLOCKIERT | POST `/user/repos` → HTTP 403, „Resource not accessible by integration“ |
+| GitHub Actions | AUSSTEHEND | Workflow vorhanden; erste Ausführung nach Upload wird separat geprüft |
+| GitHub Repository | ZUGRIFF BESTÄTIGT | `sscheidl/Daisy-on-Tulip` ist privat; Pull-/Push-Rechte nach Freigabe bestätigt |
+| GitHub Release | VORBEREITET | Alpha-Artefakte geprüft; Veröffentlichung nach Upload und CI-Prüfung |
 
 Logs liegen im Komplettpaket unter `artifacts/host-tests.log`,
 `micropython-tests.log`, `build-*.log`, `crossbuild-summary.log` und
