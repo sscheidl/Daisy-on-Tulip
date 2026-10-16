@@ -25,7 +25,8 @@ Hardwareabnahme A–D ist **OFFEN**.
 | Wiederholter Firmwarebuild | BESTANDEN | Alle neun `.bin`-/`.elf`-/`.map`-Prüfsummen im selben Workspace unverändert nach sauberem Firmware-Rebuild |
 | GitHub Actions | BESTANDEN | [Build and test #38962782176](https://github.com/sscheidl/Daisy-on-Tulip/actions/runs/38962782176): Hosttests, MicroPython, alle drei Firmwarebuilds und Artefakt-Upload erfolgreich |
 | GitHub Repository | ZUGRIFF BESTÄTIGT | `sscheidl/Daisy-on-Tulip` ist privat; Pull-/Push-Rechte nach Freigabe bestätigt |
-| GitHub Release | v0.1.0-alpha | [Privater Alpha-Prerelease](https://github.com/sscheidl/Daisy-on-Tulip/releases/tag/v0.1.0-alpha) mit Firmware, Tulip-App, Manifest und Komplettpaket |
+| GitHub Release | VERÖFFENTLICHT | [Privater Alpha-Prerelease](https://github.com/sscheidl/Daisy-on-Tulip/releases/tag/v0.1.0-alpha), 14 hochgeladene Assets; Firmware-/Manifest-Prüfsummen bestätigt |
+| GitHub Release-Upload | BESTANDEN | [Publish alpha release #38963692445](https://github.com/sscheidl/Daisy-on-Tulip/actions/runs/38963692445): Upload über Repository-Token erfolgreich |
 | Vergleich lokaler / GitHub-BINs | BESTANDEN | Alle drei aus dem Actions-Artefakt geladenen BIN-Dateien sind SHA-256-identisch mit den lokalen Release-Images |
 
 Logs liegen im Komplettpaket unter `artifacts/host-tests.log`,
