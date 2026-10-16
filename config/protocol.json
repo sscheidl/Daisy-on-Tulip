@@ -1,0 +1,17 @@
+{
+  "channel": 1,
+  "cc_attack": 20,
+  "cc_decay": 21,
+  "cc_ping": 118,
+  "cc_pong": 119,
+  "ping_value": 42,
+  "heartbeat_ms": 500,
+  "timeout_ms": 1600,
+  "cc_interval_ms": 40,
+  "attack_min_ms": 1,
+  "attack_max_ms": 1000,
+  "decay_min_ms": 20,
+  "decay_max_ms": 3000,
+  "notes": [60, 62, 64, 65, 67, 69, 71, 72, 72, 74, 76, 77, 79, 81, 83, 84],
+  "note_names": ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C5", "C5", "D5", "E5", "F5", "G5", "A5", "B5", "C6"]
+}

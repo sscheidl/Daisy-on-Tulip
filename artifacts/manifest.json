@@ -1,0 +1,85 @@
+{
+  "version": "v0.1.0-alpha",
+  "target": "Electro-Smith Seed3 Desktop Dev Kit",
+  "app_type": "BOOT_NONE / internal flash 0x08000000",
+  "compiler": "arm-none-eabi-g++ (xPack GNU Arm Embedded GCC x86_64) 14.2.1 20241119",
+  "dependencies": {
+    "libDaisy": {
+      "url": "https://github.com/electro-smith/libDaisy.git",
+      "commit": "f715e4875b2d28445d0c11a0a17f064a248f69d0"
+    },
+    "DaisySP": {
+      "url": "https://github.com/electro-smith/DaisySP.git",
+      "commit": "2c72eaf9eac5fc0dca1919d65d606da907832618"
+    },
+    "reference_tulipcc": {
+      "url": "https://github.com/shorepine/tulipcc.git",
+      "commit": "17d1ef1d14aa0a51520fced04c87c1328f79bbd0"
+    },
+    "reference_MicroPython": {
+      "url": "https://github.com/micropython/micropython.git",
+      "commit": "82e69df33e379bf491bea647e217d6d56c5b8090"
+    },
+    "reference_DaisyExamples": {
+      "url": "https://github.com/daisyaudio/DaisyExamples.git",
+      "commit": "259ed82c7d4c0d7699f695945e6e111b7dc7cb27"
+    }
+  },
+  "firmware_sources": {
+    "config/protocol.json": "fcee82321f27d4f8c7cc94d4c1c7493794f3f91fb6f6cbe80e5dda81caac6c6b",
+    "daisy/Makefile": "a7b8c4d81a977864e3d521625c7eb30b7719379bad494e59697d89552ac4d46e",
+    "daisy/include/control.h": "58f04b9322813be27792bfb21c9881b26cff4a06e37b7b2efd3d302005af0fc9",
+    "daisy/include/midi_backend.h": "cf06865d887869b3caac862c5b1833cb4df52aabaab75f0fc7e1efd9ce5f0415",
+    "daisy/include/midi_control.h": "76148b37b29c4f7fc86c546671ac8412275ad2097bf16380417925e74c8e5b88",
+    "daisy/include/protocol_config.h": "cbb7da1c66b3fc6907c9208f0da024179a0a16feb366cc697920615f6894fe70",
+    "daisy/include/strike_queue.h": "38a074946657727714e8c87e25d9f7dc1df82d42ae6db593c5b225e5b17fe57e",
+    "daisy/include/synth.h": "00d1b874e49c65dc514fdcd55ab1b4f9415ce213109631176c6097031bb6a099",
+    "daisy/src/main.cpp": "30650deb99416a021e22eb5bd3c603c80d3bcb0a0d30592c46d0b81c497d319c"
+  },
+  "tulip_sources": {
+    "tulip/daisy_toy_piano/__init__.py": "61747845d7a1fbf0bf3af62f615f7374795e77ba34a2d3aec9900d625e4cfa31",
+    "tulip/daisy_toy_piano/app.py": "40cc8b8d7188bc5d097c719aca2f1b3570d55df721fe0697bd893dff00b08dcc",
+    "tulip/daisy_toy_piano/config.py": "ee480a8b035a67037727c7864af65e46c82040ee4cfb6b0bafc02f8c916701b4",
+    "tulip/daisy_toy_piano/controller.py": "ebf92dbdf87b025ed150c1b1e46389be31f64d1e2ee46863143439ba554e7b45",
+    "tulip/daisy_toy_piano/transport.py": "58f14bc97006a2c82e435bc4809691602e2a200b7a4d58e54283977cac5e25d7"
+  },
+  "files": {
+    "daisy_toy_piano_DIN.bin": {
+      "bytes": 99716,
+      "sha256": "f56472cc1c96b21bf1b3c521676e59f95ab23e4d4f811afaec494e296e25813a"
+    },
+    "daisy_toy_piano_USB_EXTERNAL.bin": {
+      "bytes": 112860,
+      "sha256": "43e7e90ebf5ee3c2003f8e7da5853e8ad392a911ff383652fbfb694c4de105e1"
+    },
+    "daisy_toy_piano_USB_INTERNAL.bin": {
+      "bytes": 112852,
+      "sha256": "01e42136f6493c41530ae82aabb7a321d285c3212bbf1a3b1d7fd111a3eb13a5"
+    },
+    "daisy_toy_piano_DIN.elf": {
+      "bytes": 1801284,
+      "sha256": "47c9750c43ac49458df5766d354f5e4a6c2c74bb8399f9d15b1f370cad46a05e"
+    },
+    "daisy_toy_piano_USB_EXTERNAL.elf": {
+      "bytes": 2040760,
+      "sha256": "f2aba7d5860dcd049361d6d8fcf2962f90eb5f898ff2ffbf96c87f237c8b3732"
+    },
+    "daisy_toy_piano_USB_INTERNAL.elf": {
+      "bytes": 2040756,
+      "sha256": "238738e21aecec1253d3063bff242cee2104f6ac7a9d5ef11cb6cb16aa283e82"
+    },
+    "daisy_toy_piano_DIN.map": {
+      "bytes": 774193,
+      "sha256": "53cee320d99e78a9cfa34145093e1e706b5005989790e5deedf95639c4a4fdf7"
+    },
+    "daisy_toy_piano_USB_EXTERNAL.map": {
+      "bytes": 873926,
+      "sha256": "0cdfea2d954eec68ed8e241c478ec320775d8bb6a90d23e4a5ad5a6f58147fe5"
+    },
+    "daisy_toy_piano_USB_INTERNAL.map": {
+      "bytes": 873887,
+      "sha256": "869ab4c491ce186b2b931925d0911d74575f16850c70c8d43be9268a9cc316e6"
+    }
+  },
+  "hardware_verified": false
+}

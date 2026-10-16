@@ -1,0 +1,12 @@
+third_party/
+.tools/
+build/
+__pycache__/
+*.pyc
+.venv/
+dist/
+artifacts/*.bin
+artifacts/*.elf
+artifacts/*.map
+artifacts/*.log
+artifacts/SHA256SUMS

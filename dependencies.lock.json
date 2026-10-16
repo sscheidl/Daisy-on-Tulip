@@ -1,0 +1,7 @@
+{
+  "libDaisy": {"url": "https://github.com/electro-smith/libDaisy.git", "commit": "f715e4875b2d28445d0c11a0a17f064a248f69d0"},
+  "DaisySP": {"url": "https://github.com/electro-smith/DaisySP.git", "commit": "2c72eaf9eac5fc0dca1919d65d606da907832618"},
+  "reference_tulipcc": {"url": "https://github.com/shorepine/tulipcc.git", "commit": "17d1ef1d14aa0a51520fced04c87c1328f79bbd0"},
+  "reference_MicroPython": {"url": "https://github.com/micropython/micropython.git", "commit": "82e69df33e379bf491bea647e217d6d56c5b8090"},
+  "reference_DaisyExamples": {"url": "https://github.com/daisyaudio/DaisyExamples.git", "commit": "259ed82c7d4c0d7699f695945e6e111b7dc7cb27"}
+}

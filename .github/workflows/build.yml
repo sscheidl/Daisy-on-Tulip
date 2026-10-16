@@ -1,0 +1,29 @@
+name: Build and test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: bash scripts/install_toolchain.sh
+      - run: python3 scripts/bootstrap.py
+      - run: bash scripts/test.sh
+      - run: python3 scripts/check_micropython.py
+      - run: bash scripts/build.sh
+      - run: python3 scripts/package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Daisy-on-Tulip-v0.1.0-alpha
+          path: |
+            artifacts/
+            dist/daisy_toy_piano.zip
