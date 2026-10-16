@@ -23,14 +23,18 @@ Hardwareabnahme A–D ist **OFFEN**.
 | MicroPython-App | BESTANDEN (Syntax) | Alle fünf Dateien mit `mpy-cross` aus Tulips MicroPython-Commit übersetzt, `.mpy` v6.3 |
 | LVGL-API-Prüfung | BESTANDEN (Quellprüfung) | Aktuellen Binding-C-Code aus Referenzheadern generiert; Timer-Create/Delete und verwendete native APIs vorhanden. Kein Render-/Touchtest |
 | Wiederholter Firmwarebuild | BESTANDEN | Alle neun `.bin`-/`.elf`-/`.map`-Prüfsummen im selben Workspace unverändert nach sauberem Firmware-Rebuild |
-| GitHub Actions | AUSSTEHEND | Workflow vorhanden; erste Ausführung nach Upload wird separat geprüft |
+| GitHub Actions | BESTANDEN | [Build and test #38962782176](https://github.com/sscheidl/Daisy-on-Tulip/actions/runs/38962782176): Hosttests, MicroPython, alle drei Firmwarebuilds und Artefakt-Upload erfolgreich |
 | GitHub Repository | ZUGRIFF BESTÄTIGT | `sscheidl/Daisy-on-Tulip` ist privat; Pull-/Push-Rechte nach Freigabe bestätigt |
-| GitHub Release | VORBEREITET | Alpha-Artefakte geprüft; Veröffentlichung nach Upload und CI-Prüfung |
+| GitHub Release | v0.1.0-alpha | [Privater Alpha-Prerelease](https://github.com/sscheidl/Daisy-on-Tulip/releases/tag/v0.1.0-alpha) mit Firmware, Tulip-App, Manifest und Komplettpaket |
+| Vergleich lokaler / GitHub-BINs | BESTANDEN | Alle drei aus dem Actions-Artefakt geladenen BIN-Dateien sind SHA-256-identisch mit den lokalen Release-Images |
 
 Logs liegen im Komplettpaket unter `artifacts/host-tests.log`,
 `micropython-tests.log`, `build-*.log`, `crossbuild-summary.log` und
 `reproducibility.log`. `manifest.json` enthält die Quellen-/Artefakt-Prüfsummen
-und exakten Abhängigkeits-Commits.
+und exakten Abhängigkeits-Commits. `github-ci-verification.log` dokumentiert den
+Abgleich der drei CI-Binärdateien. Der GitHub-Lauf prüfte Code-Commit
+`b75f584d45b871598c3437ef59b19ba20b952575`; nachfolgende Änderungen betreffen
+ausschließlich den Veröffentlichungsstatus in der Dokumentation.
 
 ## Speicherbedarf der fertigen Images
 

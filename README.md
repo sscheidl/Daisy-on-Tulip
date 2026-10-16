@@ -93,7 +93,7 @@ make -C daisy MIDI_BACKEND=DIN
 Der Build nutzt `desktop_devkit::Hardware`, keine Field-/Pod-/Patch-Pinbelegung.
 Die Bibliothek erkennt Seed3 und dessen TAC5242-Codec zur Laufzeit. Ein
 [GitHub-Actions-Workflow](.github/workflows/build.yml) baut und testet bei Push/PR;
-die erste GitHub-Ausführung wird nach dem Upload geprüft. Ergebnisse stehen im
+der [erste GitHub-Lauf](https://github.com/sscheidl/Daisy-on-Tulip/actions/runs/38962782176) ist bestanden. Ergebnisse stehen im
 [Testprotokoll](docs/TEST_RESULTS.md).
 
 Konfiguration: [config/protocol.json](config/protocol.json) ändern und
@@ -104,7 +104,7 @@ Noten, CCs, Zeiten und MIDI-Kanäle für C++ und MicroPython.
 
 Das Projekt wird im privaten Repository
 [sscheidl/Daisy-on-Tulip](https://github.com/sscheidl/Daisy-on-Tulip) gepflegt.
-Der vorbereitete Prerelease
+Der Prerelease
 [v0.1.0-alpha](https://github.com/sscheidl/Daisy-on-Tulip/releases/tag/v0.1.0-alpha)
 enthält die drei Firmware-Sätze, die Tulip-App, Prüfsummen und das Komplettpaket.
 

@@ -10,7 +10,9 @@ Erster Machbarkeitsprototyp für **Seed3 Desktop Dev Kit + Tulip CC**.
 - Gepinnte Bibliotheken/Toolchain, Hosttests, MicroPython-Syntaxcheck,
   reproduzierbares Buildskript und GitHub Actions.
 
-**Validierung:** Softwaretests und Crossbuilds sind bestanden; keine reale
+**Validierung:** Softwaretests und Crossbuilds sind lokal und in
+[GitHub Actions](https://github.com/sscheidl/Daisy-on-Tulip/actions/runs/38962782176) bestanden.
+Die drei GitHub-BINs stimmen mit den lokalen Release-BINs überein. Keine reale
 Hardwareprüfung. Keine Zusage für USB-Hotplug oder Multi-Touch-Akkorde.
 AD ist ein One-Shot, Note-Off beendet den endlichen Ausklang nicht vorzeitig.
 7-Bit-Parameter, kein Voice Stealing, keine Velocity-Lautstärke.

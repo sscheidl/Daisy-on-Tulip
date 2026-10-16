@@ -15,9 +15,9 @@ cd Daisy-on-Tulip
 ```
 
 Der [Alpha-Prerelease](https://github.com/sscheidl/Daisy-on-Tulip/releases/tag/v0.1.0-alpha)
-ist für Firmware- und App-Dateien vorgesehen. Zugriff auf Repository und Assets
-erfordert eine passende GitHub-Anmeldung. Die Actions-Ausführung und der
-Veröffentlichungsstatus werden in `TEST_RESULTS.md` gesondert dokumentiert.
+enthält Firmware- und App-Dateien. Zugriff auf Repository und Assets erfordert
+eine passende GitHub-Anmeldung. Der erste Actions-Lauf ist bestanden; Details
+und Hardwaretestgrenzen stehen in `TEST_RESULTS.md`.
 
 ## Enthaltene Übergabe
 
@@ -29,7 +29,7 @@ Veröffentlichungsstatus werden in `TEST_RESULTS.md` gesondert dokumentiert.
 - `dist/Daisy-on-Tulip-v0.1.0-alpha.bundle`: vollständige Git-Historie und Tag.
 
 Builddateien sind nicht im Quell-Git getrackt. Sie liegen im Komplettpaket und
-werden als Prerelease-Assets bereitgestellt. Mit `scripts/build.sh` lassen sie
+liegen als Prerelease-Assets vor. Mit `scripts/build.sh` lassen sie
 sich aus den gepinnten Quellen erneut erzeugen. Das Manifest prüft den
 Zusammenhang von Firmware-/App-Quellen und Artefakten vor dem Verpacken.
 
