@@ -1,0 +1,6 @@
+make: Entering directory '/workspace/Daisy-on-Tulip/third_party/DaisySP'
+make[1]: Entering directory '/workspace/Daisy-on-Tulip/third_party/DaisySP/DaisySP-LGPL'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/workspace/Daisy-on-Tulip/third_party/DaisySP/DaisySP-LGPL'
+Building DaisySP-LGPL
+make: Leaving directory '/workspace/Daisy-on-Tulip/third_party/DaisySP'

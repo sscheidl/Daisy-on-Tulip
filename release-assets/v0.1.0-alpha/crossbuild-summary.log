@@ -1,0 +1,8 @@
+libDaisy f715e4875b2d28445d0c11a0a17f064a248f69d0
+DaisySP 2c72eaf9eac5fc0dca1919d65d606da907832618
+   text	   data	    bss	    dec	    hex	filename
+  98004	   1712	  71664	 171380	  29d74	artifacts/daisy_toy_piano_DIN.elf
+   text	   data	    bss	    dec	    hex	filename
+ 110544	   2300	 123512	 236356	  39b44	artifacts/daisy_toy_piano_USB_INTERNAL.elf
+   text	   data	    bss	    dec	    hex	filename
+ 110552	   2300	 123512	 236364	  39b4c	artifacts/daisy_toy_piano_USB_EXTERNAL.elf

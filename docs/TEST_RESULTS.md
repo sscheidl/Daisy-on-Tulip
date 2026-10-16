@@ -33,8 +33,9 @@ Logs liegen im Komplettpaket unter `artifacts/host-tests.log`,
 `reproducibility.log`. `manifest.json` enthält die Quellen-/Artefakt-Prüfsummen
 und exakten Abhängigkeits-Commits. `github-ci-verification.log` dokumentiert den
 Abgleich der drei CI-Binärdateien. Der GitHub-Lauf prüfte Code-Commit
-`b75f584d45b871598c3437ef59b19ba20b952575`; nachfolgende Änderungen betreffen
-ausschließlich den Veröffentlichungsstatus in der Dokumentation.
+`b75f584d45b871598c3437ef59b19ba20b952575`; nachfolgende Änderungen betreffen Dokumentation, die Release-Automatisierung
+und die Ablage der bereits geprüften Artefakte. Firmware- und App-Quellen sind
+unverändert.
 
 ## Speicherbedarf der fertigen Images
 

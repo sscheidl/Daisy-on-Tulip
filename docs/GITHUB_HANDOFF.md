@@ -28,8 +28,9 @@ und Hardwaretestgrenzen stehen in `TEST_RESULTS.md`.
 - `dist/daisy_toy_piano.zip`: installierbare Python-Quelldateien.
 - `dist/Daisy-on-Tulip-v0.1.0-alpha.bundle`: vollständige Git-Historie und Tag.
 
-Builddateien sind nicht im Quell-Git getrackt. Sie liegen im Komplettpaket und
-liegen als Prerelease-Assets vor. Mit `scripts/build.sh` lassen sie
+Die geprüften Alpha-Builddateien und Testlogs sind unter
+`release-assets/v0.1.0-alpha/` im privaten Repository abgelegt. Sie liegen
+zusätzlich im Komplettpaket und als Prerelease-Assets vor. Mit `scripts/build.sh` lassen sie
 sich aus den gepinnten Quellen erneut erzeugen. Das Manifest prüft den
 Zusammenhang von Firmware-/App-Quellen und Artefakten vor dem Verpacken.
 

@@ -1,0 +1,17 @@
+PASS: real MIDI parser/protocol, ownership, LEDs, pickup, watchdog/wrap, AD, 16-voice DSP, queue
+test_coalescing_and_feedback (test_controller.SessionTest.test_coalescing_and_feedback) ... ok
+test_duplicate_c5_ownership (test_controller.SessionTest.test_duplicate_c5_ownership) ... ok
+test_filters_and_ranges (test_controller.SessionTest.test_filters_and_ranges) ... ok
+test_handshake_and_all_keys (test_controller.SessionTest.test_handshake_and_all_keys) ... ok
+test_lifecycle (test_controller.SessionTest.test_lifecycle) ... ok
+test_tick_wrap (test_controller.SessionTest.test_tick_wrap) ... ok
+test_timeout_and_reconnect (test_controller.SessionTest.test_timeout_and_reconnect) ... ok
+test_cleanup_after_partial_startup (test_ui_events.UiEventTest.test_cleanup_after_partial_startup) ... ok
+test_close_timer_callback_cleanup (test_ui_events.UiEventTest.test_close_timer_callback_cleanup) ... ok
+test_press_release_lost_and_ignore_click (test_ui_events.UiEventTest.test_press_release_lost_and_ignore_click) ... ok
+test_slider_drag_and_programmatic_update (test_ui_events.UiEventTest.test_slider_drag_and_programmatic_update) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK

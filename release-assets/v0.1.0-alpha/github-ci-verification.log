@@ -1,0 +1,3 @@
+PASS: GitHub Actions run https://github.com/sscheidl/Daisy-on-Tulip/actions/runs/38962782176
+Code commit b75f584d45b871598c3437ef59b19ba20b952575
+All three downloaded CI BIN images match the local release BIN SHA-256 checksums. ELF/MAP debug paths may differ across workspaces.

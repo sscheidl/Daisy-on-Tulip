@@ -3,7 +3,8 @@
 `scripts/build.sh` erzeugt hier die drei Varianten mit `.bin`, `.elf`, `.map`,
 `SHA256SUMS`, `manifest.json` und Buildlogs. Die Binärdateien sind im
 Komplett-ZIP vorhanden und werden als Release-Assets vorbereitet; das Quell-Git
-enthält nur Anleitung und Manifest.
+enthält hier Anleitung und Manifest. Der geprüfte Alpha-Satz ist außerdem
+unter `release-assets/v0.1.0-alpha/` versioniert.
 
 | Dateistamm | MIDI-Anschluss |
 |---|---|

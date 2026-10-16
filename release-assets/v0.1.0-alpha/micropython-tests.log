@@ -1,0 +1,9 @@
+make: Entering directory '/workspace/reference/tulipcc/micropython/mpy-cross'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+make: Leaving directory '/workspace/reference/tulipcc/micropython/mpy-cross'
+MicroPython 82e69df on 2026-10-16; mpy-cross emitting mpy v6.3
+PASS mpy-cross: __init__.py
+PASS mpy-cross: app.py
+PASS mpy-cross: config.py
+PASS mpy-cross: controller.py
+PASS mpy-cross: transport.py

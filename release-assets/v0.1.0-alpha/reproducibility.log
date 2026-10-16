@@ -1,0 +1,1 @@
+PASS: clean firmware rebuild in the same workspace; all 9 BIN/ELF/MAP SHA-256 checksums unchanged.
